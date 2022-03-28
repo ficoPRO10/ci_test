@@ -1,5 +1,5 @@
 build:
-	gcc -o ci_test main.c
+	gcc $(CFLAGS) -o ci_test main.c
 
 run:
 	./ci_test
