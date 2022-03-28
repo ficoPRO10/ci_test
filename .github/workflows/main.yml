@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: debug-artifacts
-          path: artifacts
+          path: ci_test
   
   # This workflow contains a single job called "build"
   build-release:
@@ -54,3 +54,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a project
         run: make run
+        
+      - name: Store artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-artifacts
+          path: ci_test
